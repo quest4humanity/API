@@ -1,0 +1,2103 @@
+{
+	"info": {
+		"_postman_id": "f802e9bc-d92f-202c-3a18-06b26c4347c5",
+		"name": "chapchap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{host}}:{{port}}/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/devmode (push)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"ds\": \"pushObj('ru', '6b7ccfa7b2274035b62416a6c4c00d51', {'a':1,'b':88})\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/devmode",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"devmode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/devmode (get)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"ds\": \"getObj('ru', '6b7ccfa7b2274035b62416a6c4c00d51')\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/devmode",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"devmode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/devmode (flush db)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"ds\": \"flushDb()\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/devmode",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"devmode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/buzz/ (all buzz IDs)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/buzz/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"buzz",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/buzz/id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cc_type",
+						"value": "request"
+					},
+					{
+						"key": "cc_timeout",
+						"value": "0"
+					},
+					{
+						"key": "cc_protocol_version",
+						"value": "1.0"
+					},
+					{
+						"key": "cc_payload_type",
+						"value": ""
+					},
+					{
+						"key": "cc_payload_digest",
+						"value": ""
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/buzz/b6b1d0ce231f49a18e42ff8d535d7805",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"buzz",
+						"b6b1d0ce231f49a18e42ff8d535d7805"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/buzz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"type\": \"dnd\",\n        \t\"current_threshold_idx\": 0,\n            \"visit_id\": \"9ce9b3f9b60b499cb32f7f3b434beb2d\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/buzz",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"buzz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/buzz/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/buzz/178715809c15479b8e3716733fcc0d85",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"buzz",
+						"178715809c15479b8e3716733fcc0d85"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/buzz/id (complete)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/buzz/2f4f41ee91de4900a9379d5a4478a0e3?action=complete",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"buzz",
+						"2f4f41ee91de4900a9379d5a4478a0e3"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "complete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/buzz/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"type\": \"svc\",\n        \t\"current_threshold_idx\": 0,\n            \"visit_id\": \"074b88fca379403e81c9def49dc07765\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/buzz/b1abcea38a92487c9efcca6f94b82dbe",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"buzz",
+						"b1abcea38a92487c9efcca6f94b82dbe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/buzz/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"type\": \"svc\",\n        \t\"current_threshold_idx\": 0,\n            \"visit_id\": \"074b88fca379403e81c9def49dc07765\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/buzz/b1abcea38a92487c9efcca6f94b82dbe?status=completed",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"buzz",
+						"b1abcea38a92487c9efcca6f94b82dbe"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "completed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/timer/ (all timer IDs)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/timer/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"timer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/timer/id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cc_type",
+						"value": "request"
+					},
+					{
+						"key": "cc_timeout",
+						"value": "0"
+					},
+					{
+						"key": "cc_protocol_version",
+						"value": "1.0"
+					},
+					{
+						"key": "cc_payload_type",
+						"value": ""
+					},
+					{
+						"key": "cc_payload_digest",
+						"value": ""
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/timer/efe8fa23d9904d35be2b4e8917fca734",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"timer",
+						"efe8fa23d9904d35be2b4e8917fca734"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/timer/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "cc_type",
+						"value": "request"
+					},
+					{
+						"key": "cc_timeout",
+						"value": "0"
+					},
+					{
+						"key": "cc_protocol_version",
+						"value": "1.0"
+					},
+					{
+						"key": "cc_payload_type",
+						"value": ""
+					},
+					{
+						"key": "cc_payload_digest",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"status\": \"stopped\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/timer/338f094c6f3042b7971a7430d2349d02?completed=1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"timer",
+						"338f094c6f3042b7971a7430d2349d02"
+					],
+					"query": [
+						{
+							"key": "completed",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/timer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"type\": \"one-shot\",\n            \"status\": \"active\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/timer/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"timer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/timer/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/timer/0fb9bf4ec9744ba284dcee08388ce30d",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"timer",
+						"0fb9bf4ec9744ba284dcee08388ce30d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/ (all user IDs)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/id (by biz)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/540297b17c5441b8adc126e8bd6620c1?biz_id=36afd3ece1d344348aa2a666af25e1a6",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"540297b17c5441b8adc126e8bd6620c1"
+					],
+					"query": [
+						{
+							"key": "biz_id",
+							"value": "36afd3ece1d344348aa2a666af25e1a6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/ba54e96283b943c7818de5b53e3ddfb5",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"ba54e96283b943c7818de5b53e3ddfb5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"username\": \"rung2018\",\n            \"password\": \"888999\",\n            \"email\": \"rick@odysseyinnov8ions.com\",\n            \"lastname\": \"Good\",\n            \"firstname\": \"Guy2\",\n            \"preferences\": [\"veggies\",\"fish\",\"sushi\"],\n            \"dislikes\": [\"fried food\"],\n            \"allergies\": [],\n            \"roles\": [],\n            \"cc_settings\": \"\",\n            \"phone\": \"\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_biz_assoc_map\": {\n        \"36afd3ece1d344348aa2a666af25e1a6\": {\n            \"customer\": \"60c618937697436a8fee0f7c90e37c88\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/d9c8f4a34ea040b0a23a2e74a6a6eafe",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"d9c8f4a34ea040b0a23a2e74a6a6eafe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/0fb9bf4ec9744ba284dcee08388ce30d",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"0fb9bf4ec9744ba284dcee08388ce30d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"username\": \"rung\",\n            \"password\": \"8899\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/uba/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"username\": \"rung\",\n            \"password\": \"8899\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/uba/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"uba",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/uba/id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"username\": \"rung\",\n            \"password\": \"8899\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/uba/ab1adac44ebc487d8564d3143070aff7",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"uba",
+						"ab1adac44ebc487d8564d3143070aff7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/uba",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"roles\": [],\n    \"biz_id\": \"36afd3ece1d344348aa2a666af25e1a6\",\n    \"visits\": [\n    ],\n    \"type\": \"manager\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/uba/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"uba",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/uba (partial)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"roles\": [],\n    \"biz_id\": \"af0e1d85cc194abca52000aeab4126f1\",\n    \"visits\": [\"71a0a7ff980241d98f0e212265399187\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/uba/65816672723943259aaa3348b352aa8c",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"uba",
+						"65816672723943259aaa3348b352aa8c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/uba/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"username\": \"rung\",\n            \"password\": \"8899\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/uba/60c618937697436a8fee0f7c90e37c88",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"uba",
+						"60c618937697436a8fee0f7c90e37c88"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/visit",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"username\": \"rung\",\n            \"password\": \"8899\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/visit",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"visit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/visit/id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"username\": \"rung\",\n            \"password\": \"8899\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/visit/1b85dfd4db0e451eb6d8274d716bde3e",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"visit",
+						"1b85dfd4db0e451eb6d8274d716bde3e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/visit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"pending\",\n    \"notes\": \"rick's visit99\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/visit",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"visit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/visit/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"parent_id\": \"e4fb379c92674430992b01849da655b6\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/visit/90e85258142f4450ba1c96d4817e64dc",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"visit",
+						"90e85258142f4450ba1c96d4817e64dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/visit/id (complete)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/visit/1f581c70448d47c4aa5e5adc09160009?action=complete",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"visit",
+						"1f581c70448d47c4aa5e5adc09160009"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "complete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/visit/id (approve)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/visit/2845faec165d452b815e977fb8a2fe3e?action=approve",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"visit",
+						"2845faec165d452b815e977fb8a2fe3e"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "approve"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/visit/id (deny)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/visit/2845faec165d452b815e977fb8a2fe3e?action=deny",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"visit",
+						"2845faec165d452b815e977fb8a2fe3e"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "deny"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/user/visit/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/user/visit/0e0835975e1840e3ac738b78ec2e31eb",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"user",
+						"visit",
+						"0e0835975e1840e3ac738b78ec2e31eb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/table/ (all table IDs)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/table/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"table",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/table/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/table/c90b4aace0ef4c81bdda76c8320d10e8",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"table",
+						"c90b4aace0ef4c81bdda76c8320d10e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/table",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"name\": \"#88\",\n            \"status\": \"available\",\n            \"location\": \"by front cashier\",\n            \"biz_id\": \"f5686aa761bd4647804128666a898e81\",\n            \"n_seats\": 6\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/table",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"table"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/table/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"location\": \"aisle1,row8\",\n            \"name\": \"a1r8\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/table/c90b4aace0ef4c81bdda76c8320d10e8",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"table",
+						"c90b4aace0ef4c81bdda76c8320d10e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/table/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/table/0fb9bf4ec9744ba284dcee08388ce30d",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"table",
+						"0fb9bf4ec9744ba284dcee08388ce30d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Original Buffalo Wings\",\n    \"twoway\": true,\n    \"longitude\": 8899.77,\n    \"latitude\": 66778899.9,\n    \"addr_street\": \"150 S. B Street\",\n    \"addr_city\": \"San Mateo\",\n    \"addr_state\": \"CA\",\n    \"addr_zip\": \"94401\",\n    \"email\": \"info@obw.com\",\n    \"website\": \"obw.com\",\n    \"phone\": \"6509998888\",\n    \"status\": \"completed\",\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/9184ce9c0fdd4a1782e156a9b8f74cac",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						"9184ce9c0fdd4a1782e156a9b8f74cac"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz/id (partial)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"twoway\": true,\n    \"phone\": \"T650-888-6666\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/dd2c0e56e9184b0e92a6a357842cdbce",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						"dd2c0e56e9184b0e92a6a357842cdbce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/c3a3518dac904518906810c961121359",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						"c3a3518dac904518906810c961121359"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Original Buffalo Wings #9\",\n    \"twoway\": false,\n    \"longitude\": 8899.77,\n    \"latitude\": 66888899.9,\n    \"addr_street\": \"287 El Camino Real\",\n    \"addr_street2\": \"\",\n    \"cuisine\": [\"American\"],\n    \"picture\": \"www.obw.com/sb/pic\",\n    \"hours\": [],\n    \"addr_city\": \"San Bruno\",\n    \"addr_state\": \"CA\",\n    \"addr_zip\": \"94066\",\n    \"email\": \"info@obw.com\",\n    \"website\": \"obw.com\",\n    \"phone\": \"6509998888\",\n    \"fax\": \"6509998329\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/2bd4a690194643dd8d42c909356be69e",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						"2bd4a690194643dd8d42c909356be69e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz/checkin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": \"7e9466c76e6e4f5990a465e8837fea73\",\n  \"biz_info\": {\"id\": \"af0e1d85cc194abca52000aeab4126f1\"},\n  \"table_id\": \"774ba63ab9fe4ad181dc61c7b8fb0abc\",\n  \"lng\": 0,\n  \"lat\": 0,\n  \"party_size\": 4,\n  \"party_name\": \"Ungs\",\n  \"is_joining\": false\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/checkin",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						"checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz/checkin (to waitinglist)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": \"eb5d973fe0bd43ec8dcc76a7ef4a7100\",\n  \"biz_info\": {\"id\": \"e3881ad317f64e9ba887f5a8d68c3fcd\"},\n  \"table_id\": \"\",\n  \"lng\": 0,\n  \"lat\": 0,\n  \"party_size\": 4,\n  \"party_name\": \"Batman\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/checkin",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						"checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz/checkin (new biz)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": \"f6577ee04e2e47c2a7546de4319f3563\",\n  \"biz_info\": {\"name\": \"obw-san bruno\"},\n  \"table_id\": \"\",\n  \"lng\": 0,\n  \"lat\": 0,\n  \"party_size\": 4,\n  \"party_name\": \"\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/checkin",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						"checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/biz/lookuptableby/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/biz/lookuptableby/",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"biz",
+						"lookuptableby",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/visitstate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/visitstate",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"visitstate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/visitstate/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/visitstate/16292f012ac34f7bb01832c40eb2267e",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"visitstate",
+						"16292f012ac34f7bb01832c40eb2267e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/visitstate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"order\",\n    \"buzz_array\": [],\n    \"status\": \"inprogress\",\n    \"visit_id\": \"\",\n    \"notes\": \"\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/visitstate",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"visitstate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/visitstate/id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"order\",\n    \"status\": \"inprogress\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/visitstate/id",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"visitstate",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/visitstate/id (complete)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/visitstate/ada3dfefa4f443b3a88f31a985820542?action=complete",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"visitstate",
+						"ada3dfefa4f443b3a88f31a985820542"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "complete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/visitstate/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/visitstate",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"visitstate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/location",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/location/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/location/ddb1ff6ae6e54dedba5da3e2a96e11ab?from_index=0&to_index=-1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"location",
+						"ddb1ff6ae6e54dedba5da3e2a96e11ab"
+					],
+					"query": [
+						{
+							"key": "from_index",
+							"value": "0"
+						},
+						{
+							"key": "to_index",
+							"value": "-1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/location",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"user_id\": \"540297b17c5441b8adc126e8bd6620c1\",\n            \"lng\": 112233,\n            \"lat\": -8899\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/location",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/location/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"user_id\": \"540297b17c5441b8adc126e8bd6620c1\",\n            \"lng\": 112233.44,\n            \"lat\": -8899.99\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/location/da4f52dbc5ef4f89b3a40562f47c4c28",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"location",
+						"da4f52dbc5ef4f89b3a40562f47c4c28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/location/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"user_id\": \"88\",\n            \"lng\": 112233.44,\n            \"lat\": -8899.99\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/location/5c35a4e1db344600be05035603ef95e7",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"location",
+						"5c35a4e1db344600be05035603ef95e7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id (list)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist/c9cf508da18c43f597f9bf4f7617d887",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist",
+						"c9cf508da18c43f597f9bf4f7617d887"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id (by visit_id)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist/bd6fdb9c0e494be3b29b718650e8eab4?visit_id=e084ffe10f724936a188d6e72c5df0e2",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist",
+						"bd6fdb9c0e494be3b29b718650e8eab4"
+					],
+					"query": [
+						{
+							"key": "visit_id",
+							"value": "e084ffe10f724936a188d6e72c5df0e2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id (by party_name)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist/bd6fdb9c0e494be3b29b718650e8eab4?party_name=Ungs",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist",
+						"bd6fdb9c0e494be3b29b718650e8eab4"
+					],
+					"query": [
+						{
+							"key": "party_name",
+							"value": "Ungs"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id (edit contents)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"visit_id\": \"e084ffe10f724936a188d6e72c5df0e2\",\n        \t\"estimated_wait_s\": 600\n\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist/bd6fdb9c0e494be3b29b718650e8eab4",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist",
+						"bd6fdb9c0e494be3b29b718650e8eab4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id (complete)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"visit_id\": \"e084ffe10f724936a188d6e72c5df0e2\",\n        \t\"estimated_wait_s\": 600\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist/bd6fdb9c0e494be3b29b718650e8eab4?action=complete",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist",
+						"bd6fdb9c0e494be3b29b718650e8eab4"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "complete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id (approve)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"visit_id\": \"99c15b6881334af097cba57e4e4e5d9f\",\n        \t\"estimated_wait_s\": 600\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist/d8ef566d443445beb268061ab2f8caf9?action=approve",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist",
+						"d8ef566d443445beb268061ab2f8caf9"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "approve"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id (assign)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"visit_id\": \"e084ffe10f724936a188d6e72c5df0e2\",\n        \t\"estimated_wait_s\": 600\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist/bd6fdb9c0e494be3b29b718650e8eab4?action=assign&table_id=adb359010c9846fa80c87df31f1f443c",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist",
+						"bd6fdb9c0e494be3b29b718650e8eab4"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "assign"
+						},
+						{
+							"key": "table_id",
+							"value": "adb359010c9846fa80c87df31f1f443c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id (cancel)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"visit_id\": \"e084ffe10f724936a188d6e72c5df0e2\"\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist/bd6fdb9c0e494be3b29b718650e8eab4?action=cancel",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist",
+						"bd6fdb9c0e494be3b29b718650e8eab4"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cancel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist (new list)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"visit_id\": \"99c15b6881334af097cba57e4e4e5d9f\",\n            \"biz_id\": \"af0e1d85cc194abca52000aeab4126f1\",\n            \"party_name\": \"Ungs\",\n            \"estimated_wait_s\": 600\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id (new entry)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"visit_id\": \"e084ffe10f724936a188d6e72c5df0e2\",\n            \"biz_id\": \"af0e1d85cc194abca52000aeab4126f1\",\n            \"party_name\": \"Batman\",\n            \"party_size\": 4,\n            \"estimated_wait_s\": 500\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/waitinglist/bd6fdb9c0e494be3b29b718650e8eab4",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"waitinglist",
+						"bd6fdb9c0e494be3b29b718650e8eab4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/waitinglist/id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\n            \"user_id\": \"88\",\n            \"lng\": 112233.44,\n            \"lat\": -8899.99\n        }"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/location/5c35a4e1db344600be05035603ef95e7",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"location",
+						"5c35a4e1db344600be05035603ef95e7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{host}}:{{port}}/v1/visitstate copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"order\",\n    \"buzz_array\": [],\n    \"status\": \"inprogress\",\n    \"visit_id\": \"\",\n    \"notes\": \"\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/v1/visitstate",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"v1",
+						"visitstate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
